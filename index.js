@@ -15,3 +15,7 @@ function generatePassword() {
     firstPassword.textContent = pw1
     secondPassword.textContent = pw2
 }
+
+// expose functions to the window object [Vite JS]
+
+window.generatePassword = generatePassword
