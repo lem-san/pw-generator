@@ -1,0 +1,91 @@
+body {
+    font-family: 'Inter', sans-serif;
+    font-family: 'Karla', sans-serif;
+    
+    margin: auto;
+    width: 446px;
+    height: 550px;
+    flex-shrink: 0;
+    background: #1F2937;
+}
+
+h1 {
+    font-family: Karla;
+    font-size: 40px;
+    font-style: normal;
+    line-height: 40px;
+    letter-spacing: -1px;
+    width: 354px;
+    margin-top: 100px;
+    margin-bottom: 15px;
+}
+
+h1:before {
+    content: "Generate a ";
+    color: white;
+}
+
+h1:after {
+    content: "random password";
+    color: #4ADF86;
+}
+
+h4 {
+    color: #D5D4D8;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px; 
+    margin-top: 15px;
+}
+
+button {
+    margin-top: 20px;
+    display: inline-flex;
+    padding: 9px 17px 9px 15px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    background: #10B981;
+    border: none;
+    color: white;
+    
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+hr {
+    margin-top: 40px;
+    width: 446px;
+    border: 0;
+    border-top: 1px solid #2F3E53;
+    border-radius: 5px;
+}
+
+#passwords {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.pw {
+    width: 211px;
+    height: 39px;
+    border-radius: 6px;
+    background: #273549;
+    color: #4ADF86;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 32px; 
+}
