@@ -13,9 +13,11 @@
             <button id="optionsBtn" onclick="showOptions()">Advanced options</button>
         </div>
         <div id="optionsSelection">
-            <h5>Set password length:</h5><input id="passwordLength">
-            <h5>Symbols</h5><input type="checkbox" class="cb">
-            <h5>Numbers</h5><input type="checkbox" class="cb">
+            <h5>Set password length:<input id="passwordLength"></h5>
+            <div id="toggles">
+                <h5>Symbols<input type="checkbox" class="cb" id="cbSymbols"></h5>
+                <h5>Numbers<input type="checkbox" class="cb" id="cbNumbers"></h5>
+            </div>
         </div>
         <hr>
         <div id="passwords">

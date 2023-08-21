@@ -40,6 +40,15 @@ h4 {
     margin-top: 15px;
 }
 
+h5 {
+    color: #D5D4D8;
+    font-family: Inter;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    margin-right: 20px;
+}
+
 #buttons {
     display: flex;
     justify-content: start;
@@ -67,15 +76,26 @@ button {
 
 #optionsSelection {
     display: flex;
+    flex-direction: column;
     justify-content: start;
-    align-items: center;
-    margin: 30px;
+    align-items: start;
+}
+
+#toggles {
+    display: flex;
 }
 
 #passwordLength {
-    width: 45px;
+    width: 55px;
     height: 45px;
-    margin-right: 40px;
+    margin-left: 20px;
+    border-radius: 5px;
+    background-color: #273549;
+    border: 2px solid #2F3E53;
+}
+
+.cb {
+    margin-left: 20px;
 }
 
 hr {
