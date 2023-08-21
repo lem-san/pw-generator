@@ -40,12 +40,15 @@ h4 {
     margin-top: 15px;
 }
 
+#buttons {
+    display: flex;
+    justify-content: start;
+}
+
 button {
     margin-top: 20px;
-    display: inline-flex;
+    margin-right: 20px;
     padding: 9px 17px 9px 15px;
-    justify-content: center;
-    align-items: center;
     border-radius: 6px;
     background: #10B981;
     border: none;
@@ -56,6 +59,23 @@ button {
     font-style: normal;
     font-weight: 500;
     line-height: 24px;
+}
+
+#optionsBtn {
+    background: #f3404f;
+}
+
+#optionsSelection {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin: 30px;
+}
+
+#passwordLength {
+    width: 45px;
+    height: 45px;
+    margin-right: 40px;
 }
 
 hr {

@@ -8,7 +8,15 @@
     <body>
         <h1></h1>
         <h4>Never use an insecure password again.</h4>
-        <button onclick="generatePassword()">Generate passwords</button>
+        <div id="buttons">
+            <button onclick="generatePassword()">Generate passwords</button>
+            <button id="optionsBtn" onclick="showOptions()">Advanced options</button>
+        </div>
+        <div id="optionsSelection">
+            <h5>Set password length:</h5><input id="passwordLength">
+            <h5>Symbols</h5><input type="checkbox" class="cb">
+            <h5>Numbers</h5><input type="checkbox" class="cb">
+        </div>
         <hr>
         <div id="passwords">
             <span class="pw" id="pw1"></span>
