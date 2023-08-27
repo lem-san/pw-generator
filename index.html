@@ -15,11 +15,13 @@
         <div id="optionsSelection">
             <h5>Set password length:<input id="passwordLength"></h5>
             <div id="toggles">
-                <h5>Symbols<input type="checkbox" class="cb" id="cbSymbols"></h5>
-                <h5>Numbers<input type="checkbox" class="cb" id="cbNumbers"></h5>
+                <h5>Toggle off: </h5>
+                <h5 class="toggleHeading">Symbols</h5><label class="switch"><input type="checkbox" id="cbSymbols"><span class="slider"></span></label>
+                <h5 class="toggleHeading">Numbers</h5><label class="switch"><input type="checkbox" id="cbNumbers"><span class="slider"></span></label>
             </div>
         </div>
         <hr>
+        <div id="toast"></div>
         <div id="passwords">
             <span class="pw" id="pw1" onclick="copyPassword()"></span>
             <span class="pw" id="pw2" onclick="copyPassword()"></span>

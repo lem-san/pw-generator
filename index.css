@@ -52,6 +52,7 @@ h5 {
 #buttons {
     display: flex;
     justify-content: start;
+    margin-bottom: 20px;
 }
 
 button {
@@ -75,14 +76,23 @@ button {
 }
 
 #optionsSelection {
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: start;
+    display: none;
+}
+
+#optionsSelection h5, input {
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 #toggles {
     display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.toggleHeading {
+    margin-right: 15px;
+    margin-left: 10px;
 }
 
 #passwordLength {
@@ -92,14 +102,64 @@ button {
     border-radius: 5px;
     background-color: #273549;
     border: 2px solid #2F3E53;
+    color: white;
+    font-size: 20px;
+    text-align: center;
 }
 
-.cb {
-    margin-left: 20px;
+/*  For toggle switch, refer to: https://www.w3schools.com/howto/howto_css_switch.asp */
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
 }
+
+.switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #10B981;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 34px;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+  }
+  
+  input:checked + .slider {
+    background-color: #f3404f;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
 
 hr {
-    margin-top: 40px;
+    margin-top: 30px;
     width: 446px;
     border: 0;
     border-top: 1px solid #2F3E53;
@@ -129,3 +189,51 @@ hr {
     font-weight: 500;
     line-height: 32px; 
 }
+
+/*  For toast notification refer to (#22): https://alvarotrigo.com/blog/css-alerts/ 
+
+    FIX: positioning of toast. Make not fixed, apply margining depending on the text area clicked.
+*/
+
+#toast {
+    visibility: hidden;
+    min-width: 150px;
+    background-color: #273549;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    border: 3px solid #10B981;
+    padding: 16px;
+    position: fixed;
+    font-size: 16px;
+    margin-left: 70px;
+    font-family: Inter;
+  }
+  
+  #toast.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+  
+  @-webkit-keyframes fadein {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+  }
+  
+  @keyframes fadein {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+  
+  @-webkit-keyframes fadeout {
+    from {opacity: 1;} 
+    to {opacity: 0;}
+  }
+  
+  @keyframes fadeout {
+    from {opacity: 1;}
+    to {opacity: 0;}
+  }
+
